@@ -1,0 +1,21 @@
+import { Product } from '../../Interfaces/Product/Product'
+import { User } from '../../Interfaces/User/User'
+import { ProductCategory } from './../../Interfaces/Product/ProductCategory'
+
+const baseUrl = "http://localhost:8000/api"
+
+export const getUsers = async (user:User, product:Product) : Promise<ProductCategory> => {
+    const response = await fetch(`${baseUrl}/product_has_categories`,{
+        method:'POST',
+        headers:{
+            "Content-Type":"application/json"
+        },
+        body: JSON.stringify({
+            product : user,
+            categorie : product,
+        })
+    })
+
+    const json:ProductCategory = await response.json()
+    return json
+}
