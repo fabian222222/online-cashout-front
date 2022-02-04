@@ -21,7 +21,7 @@ const Header = () => {
 
     return (
         <div>
-            hello
+            bonjour
         </div>
     );
 };
