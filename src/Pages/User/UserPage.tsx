@@ -1,31 +1,24 @@
-import React, {useState, useEffect} from 'react';
+import React, {useContext} from 'react';
 import UserSingle from '../../Components/User/UserSingle';
-import { User } from '../../Interfaces/User/User';
-import { getUser } from '../../Services/User/getUser'
+import { UserContext } from '../../Providers/UserProvider';
 
 const UserPage = () => {
 
-    const [user, setUser] = useState([])
+    const {user} = useContext(UserContext)
 
-    const userAction = (async ()=> {
-        const getUserApi = await getUser(5)
-        console.log(getUserApi);
-        setUser(getUserApi as User)
-    })
-
-    useEffect(() => {
-        userAction()
-    }, []);
-
-    useEffect(() => {
-        console.log(user);
-    }, [user])
-
-    return (
-        <div>
-            <UserSingle key={user.id} email={user.email} username={user.username}></UserSingle>
-        </div>
-    );
+    if (user) {
+        return (
+            <div>
+                <UserSingle key={user.id} email={user.email} username={user.username}></UserSingle>
+            </div>
+        );
+    } else {
+        return (
+            <div>
+                wait
+            </div>
+        )
+    }
 };
 
 export default UserPage;

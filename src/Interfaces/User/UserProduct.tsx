@@ -1,10 +1,6 @@
-import {User} from './User'
-import {Product} from './../Product/Product'
-import {Promotion} from './../Promotion/Promotion'
-
 export interface UserProduct {
-    user: User,
-    product: Product,
+    user: string,
+    product: string,
     createdAt : string,
-    promotion:Promotion
+    promotion:string
 }

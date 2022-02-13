@@ -20,7 +20,7 @@ const Users = () => {
         <div>
             {users.map((user:User)=>{
                 return(
-                    <UserSingle key={user.id} email={user.email} username={user.username}></UserSingle>
+                    <UserSingle key={user.id} id={user.id} email={user.email} username={user.username}></UserSingle>
                 )
             })}
         </div>

@@ -2,7 +2,7 @@ import { Category } from './../../Interfaces/Category/Category'
 
 const baseUrl = "http://localhost:8000/api"
 
-export const getUsers = async (id:number) : Promise<Category> => {
+export const deleteCategory = async (id:number) : Promise<Category> => {
     const response = await fetch(`${baseUrl}/categories/${id}`,{
         method:'DELETE',
         headers:{

@@ -2,8 +2,8 @@ import { UserProduct } from "../../Interfaces/User/UserProduct"
 
 const baseUrl = "http://localhost:8000/api"
 
-export const getUsers = async () : Promise<Array<UserProduct>> => {
-    const response = await fetch(`${baseUrl}/user_has_products`,{
+export const getUserProducts = async (id:number) : Promise<Array<UserProduct>> => {
+    const response = await fetch(`${baseUrl}/user_has_products?user=${id}&checked=0`,{
         method:'GET',
         headers:{
             "Content-Type":"application/json"
