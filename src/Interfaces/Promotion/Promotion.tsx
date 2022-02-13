@@ -1,12 +1,9 @@
-import { UserProduct } from "../User/UserProduct";
-import { Invoice } from './../Invoice/Invoice';
-
 export interface Promotion{
-    serial:number,
+    serial:string,
     pourcent:boolean,
     fixed:boolean,
     amount:number,
     description:string,
-    userProduct?: Array<UserProduct>
-    invoice?:Array<Invoice>
+    userProduct?: Array<string>
+    invoice?:Array<string>
 }

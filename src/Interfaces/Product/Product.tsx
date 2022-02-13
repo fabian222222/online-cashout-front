@@ -1,12 +1,8 @@
-import { UserProduct } from "../User/UserProduct"
-import {ProductCategory} from './ProductCategory'
-
 export interface Product {
-    id:number,
+    id?:number,
     name:string,
     file:string,
-    filePath:string,
-    price:number,
-    userProducts:Array<UserProduct>,
-    productCategories:Array<ProductCategory>
+    price:string,
+    userProducts?:Array<string>,
+    productCategories?:Array<string>
 }

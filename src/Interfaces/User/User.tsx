@@ -4,5 +4,6 @@ export interface User {
     roles: object,
     product : Array<string>,
     password:string,
+    confirmPassword?:string,
     username:string
 }
