@@ -3,7 +3,7 @@ import { Category } from './../../Interfaces/Category/Category'
 const baseUrl = "http://localhost:8000/api"
 
 export const getUsers = async () : Promise<Array<Category>> => {
-    const response = await fetch(`${baseUrl}/invoices`,{
+    const response = await fetch(`${baseUrl}/categories`,{
         method:'GET',
         headers:{
             "Content-Type":"application/json",

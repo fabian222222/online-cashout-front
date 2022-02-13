@@ -2,8 +2,8 @@ import {Category} from './../../Interfaces/Category/Category'
 
 const baseUrl = "http://localhost:8000/api"
 
-export const getUsers = async (category:Category) : Promise<Category> => {
-    const response = await fetch(`${baseUrl}/invoices`,{
+export const createCategory = async (category:Category) : Promise<Category> => {
+    const response = await fetch(`${baseUrl}/categories`,{
         method:'POST',
         headers:{
             "Content-Type":"application/json",
