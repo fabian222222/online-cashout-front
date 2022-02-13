@@ -2,7 +2,7 @@ import {User} from './../../Interfaces/User/User'
 
 const baseUrl = "http://localhost:8000/api"
 
-export const getUsers = async (user:User) : Promise<User> => {
+export const createUser = async (user:User) : Promise<User> => {
     const response = await fetch(`${baseUrl}/users`,{
         method:'POST',
         headers:{
