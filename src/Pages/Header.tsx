@@ -16,12 +16,12 @@ const Header = () => {
     }, []);
 
     useEffect(() => {
-        console.log(users);
+        // console.log(users);
     }, [users]);
 
     return (
         <div>
-            bonjour
+            {/* bonjour */}
         </div>
     );
 };
