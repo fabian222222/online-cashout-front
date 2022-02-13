@@ -9,8 +9,6 @@ const CreateProductForm = () => {
 
     return (
         <form onSubmit={handleSubmit(async (product) => {
-            console.log(product);
-            console.log(product.file[0]);
             const getProductCreated = await createProduct(product);
         })}>
              <input placeholder="Name: " {...register("name", {

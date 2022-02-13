@@ -9,6 +9,8 @@ import UserPage from './Pages/User/UserPage';
 import UpdateUser from './Pages/User/UpdateUser';
 import CreatePromotion from './Pages/Promotion/CreatePromotion'
 import CreateCategoryPage from './Pages/Category/CreateCategoryPage';
+import UpdateCategoryPage from './Pages/Category/UpdateCategoryPage'
+import GetCategories from './Pages/Category/GetCategories'
 
 function App() {
     return (
@@ -24,6 +26,8 @@ function App() {
                     <Route path="/update" element={<UpdateUser></UpdateUser>}></Route>
                     <Route path="/promotion/create" element={<CreatePromotion></CreatePromotion>}></Route>
                     <Route path="/category" element={<CreateCategoryPage></CreateCategoryPage>}></Route>
+                    <Route path="/category/update" element={<UpdateCategoryPage></UpdateCategoryPage>}></Route>  
+                    <Route path="/categories" element={<GetCategories></GetCategories>}> </Route>
                 </Routes>
             </BrowserRouter>
         </div>
